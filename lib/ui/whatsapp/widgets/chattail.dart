@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 import 'package:ui_design/ui/constants_whatsapp.dart';
 import 'package:ui_design/ui/whatsapp/models/user.dart';
+import 'package:ui_design/ui/whatsapp/views/chatview.dart';
 
 class ChatTile extends StatelessWidget {
   final User user;
@@ -27,6 +29,9 @@ class ChatTile extends StatelessWidget {
           Text(user.msg),
         ],
       ),
+      onTap: () {
+        Get.to(ChatView(user: user));
+      },
       trailing: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.end,

@@ -15,9 +15,6 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter UI Design',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
       routes: kRoutes,
     );
   }

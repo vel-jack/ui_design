@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ui_design/ui/constants_whatsapp.dart';
 import 'package:ui_design/ui/whatsapp/views/chatlist.dart';
+import 'package:ui_design/ui/whatsapp/views/statuslist.dart';
 
 class WhatsApp extends StatelessWidget {
   const WhatsApp({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class WhatsApp extends StatelessWidget {
         text: 'STATUS',
       )
     ];
-    final screens = <Widget>[const WhatsAppChatlist(), const Text('data1')];
+    final screens = <Widget>[const WhatsAppChatlist(), StatusList()];
     return DefaultTabController(
       length: 2,
       child: Scaffold(
