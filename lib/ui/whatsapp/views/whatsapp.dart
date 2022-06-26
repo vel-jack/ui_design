@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_design/ui/constants_whatsapp.dart';
+import 'package:ui_design/ui/whatsapp/views/callslist.dart';
 import 'package:ui_design/ui/whatsapp/views/chatlist.dart';
 import 'package:ui_design/ui/whatsapp/views/statuslist.dart';
 
@@ -13,18 +14,29 @@ class WhatsApp extends StatelessWidget {
       ),
       const Tab(
         text: 'STATUS',
-      )
+      ),
+      const Tab(
+        text: 'CALLS',
+      ),
     ];
-    final screens = <Widget>[const WhatsAppChatlist(), StatusList()];
+    final screens = <Widget>[
+      const WhatsAppChatlist(),
+      StatusList(),
+      const CallList()
+    ];
     return DefaultTabController(
-      length: 2,
+      length: tabs.length,
       child: Scaffold(
         backgroundColor: kPrimaryWhatsApp2,
         body: CustomScrollView(
           slivers: <Widget>[
-            const SliverAppBar(
+            SliverAppBar(
               backgroundColor: kPrimaryWhatsApp2,
-              title: Text('WhatsApp'),
+              title: const Text('WhatsApp'),
+              actions: [
+                IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
+                IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert))
+              ],
             ),
             SliverFillRemaining(
                 child: Column(

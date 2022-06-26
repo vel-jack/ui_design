@@ -74,6 +74,11 @@ class StatusList extends StatelessWidget {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: kPrimaryWhatsApp2,
+        onPressed: () {},
+        child: const Icon(Icons.camera_alt),
+      ),
     );
   }
 }
